@@ -14,7 +14,7 @@ const forecast = (latitude, longitude, callback) => {
             callback('Unable to find location', undefined)
         } else {
             // get the correct value to use (curret, temp etc) from weatherstack documentation
-            callback(undefined, response.body.current.weather_descriptions[0] + ". It is currently " + response.body.current.temperature + " degress celsius out.")
+            callback(undefined, response.body.current.weather_descriptions[0] + ". It is currently " + response.body.current.temperature + " degrees celsius out, the wind direction is " + response.body.current.wind_dir + " and the humidity is " + response.body.current.humidity + "%.")
         }
     })
 }

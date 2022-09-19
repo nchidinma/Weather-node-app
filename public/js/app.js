@@ -18,7 +18,9 @@ weatherForm.addEventListener('submit', (e) => {
     messageTwo.textContent = ''
 
 // fetch the data from all codes into the browser.
-    fetch('http://localhost:3000/weather?address=' + location).then((response) => {
+// use fetch('http://localhost:3000/weather?address=' + location) instead if not yet deployed
+// the new fetch below works for whatever port is working
+    fetch('/weather?address=' + location).then((response) => {
         response.json().then((data) => {
             if (data.error) {
                 messageOne.textContent = data.error

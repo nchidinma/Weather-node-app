@@ -6,6 +6,9 @@ const hbs = require('hbs')
 const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
 
+// required when deploying to heroku
+const port = process.env.PORT || 3000
+
 const app = express()
 
 // Define paths for Express config
@@ -102,9 +105,13 @@ app.get('*', (req, res) => {
     })
 })
 
-// use this to make the server run. server won't run without this code
-app.listen(3000, () => {
-    console.log('Server is up on port 3000.')
+// use this to make the server run without deployment. server won't run without this code
+// app.listen(3000, () => {
+//     console.log('Server is up on port 3000.')
+// })
+// after deployment
+app.listen(port, () => {
+    console.log('Server is up on port ' + port)
 })
 
 

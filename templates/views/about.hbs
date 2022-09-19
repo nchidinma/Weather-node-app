@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title> About </title>
+    <link rel="icon" href="/img/weather.png">
+    {{!-- Access style sheet in the head --}}
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    {{!-- access the haeder and footer from partials like this. Html files can't do this --}}
+    <div class="main-content">
+        {{>header}}
+        <img class="portrait" src="/img/me.png">
+    </div>
+    
+    {{>footer}}
+</body>
+
+</html>

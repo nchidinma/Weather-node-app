@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title> Weather </title>
+    <link rel="icon" href="/img/weather.png">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    {{!-- access the haeder and footer from partials like this. Html files can't do this --}}
+    <div class="main-content">
+        {{>header}}
+        <p>Use this website to get your weather updates!</p>
+        
+        <form>
+            <input placeholder="Location">
+            <button>Search</button>
+        </form>
+
+        <p id="message-1"></p>
+        <p id="message-2"></p>
+    </div>
+
+    {{>footer}}
+    {{!-- load javascr at bottom of body --}}
+    <script src="/js/app.js"></script>
+</body>
+
+</html>
